@@ -1,0 +1,348 @@
+@prefix : <http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix inf4188: <http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#> .
+@base <http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188/> .
+
+<http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#ComposedOfFoodComponents
+inf4188:ComposedOfFoodComponents rdf:type owl:ObjectProperty ;
+                                 rdfs:domain inf4188:Food ;
+                                 rdfs:range inf4188:FoodComponent .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#belongToDelocalizedArea
+inf4188:belongToDelocalizedArea rdf:type owl:ObjectProperty ;
+                                rdfs:domain inf4188:Food ;
+                                rdfs:range inf4188:DelocalizedArea .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#composedOfDishes
+inf4188:composedOfDishes rdf:type owl:ObjectProperty ;
+                         rdfs:domain inf4188:Food ;
+                         rdfs:range inf4188:Dish .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#composedOfFoods
+inf4188:composedOfFoods rdf:type owl:ObjectProperty ;
+                        rdfs:domain inf4188:Dish ;
+                        rdfs:range inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#eatingHabitHasFoods
+inf4188:eatingHabitHasFoods rdf:type owl:ObjectProperty ;
+                            rdfs:domain inf4188:EatingHabit ;
+                            rdfs:range inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasDisease
+inf4188:hasDisease rdf:type owl:ObjectProperty ;
+                   rdfs:domain inf4188:Person ;
+                   rdfs:range inf4188:Disease .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasFoods
+inf4188:hasFoods rdf:type owl:ObjectProperty ;
+                 rdfs:domain inf4188:Food ;
+                 rdfs:range inf4188:FoodGroup .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasLifeHabit
+inf4188:hasLifeHabit rdf:type owl:ObjectProperty ;
+                     rdfs:domain inf4188:Person ;
+                     rdfs:range inf4188:LifeHabit .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasPrevention
+inf4188:hasPrevention rdf:type owl:ObjectProperty ;
+                      rdfs:domain inf4188:Disease ;
+                      rdfs:range inf4188:Prevention .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasRecipes
+inf4188:hasRecipes rdf:type owl:ObjectProperty ;
+                   rdfs:domain inf4188:Food ;
+                   rdfs:range inf4188:Recipe .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasSymptom
+inf4188:hasSymptom rdf:type owl:ObjectProperty ;
+                   rdfs:domain inf4188:Disease ;
+                   rdfs:range inf4188:Symptom .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasTreatmentProtocol
+inf4188:hasTreatmentProtocol rdf:type owl:ObjectProperty ;
+                             rdfs:domain inf4188:Disease ;
+                             rdfs:range inf4188:TreatmentProtocol .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasAge
+inf4188:hasAge rdf:type owl:DatatypeProperty ;
+               rdfs:domain inf4188:Person ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasDescription
+inf4188:hasDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:domain inf4188:BehaviourHabit ,
+                                   inf4188:EatingHabit ,
+                                   inf4188:Prevention ,
+                                   inf4188:Recipe ,
+                                   inf4188:Symptom ,
+                                   inf4188:TreatmentProtocol ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasImage
+inf4188:hasImage rdf:type owl:DatatypeProperty ;
+                 rdfs:domain inf4188:Food ;
+                 rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasName
+inf4188:hasName rdf:type owl:DatatypeProperty ;
+                rdfs:domain inf4188:Cancer ,
+                            inf4188:DelocalizedArea ,
+                            inf4188:Disease ,
+                            inf4188:Food ,
+                            inf4188:FoodComponent ,
+                            inf4188:FoodGroup ,
+                            inf4188:Person ,
+                            inf4188:Prevention ,
+                            inf4188:Symptom ,
+                            inf4188:TreatmentProtocol ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#hasRealName
+inf4188:hasRealName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain inf4188:Food ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#isWoman
+inf4188:isWoman rdf:type owl:DatatypeProperty ;
+                rdfs:domain inf4188:Person ;
+                rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#AlcohilicBeverage
+inf4188:AlcohilicBeverage rdf:type owl:Class ;
+                          rdfs:subClassOf inf4188:Beverage .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#BehaviourHabit
+inf4188:BehaviourHabit rdf:type owl:Class ;
+                       rdfs:subClassOf inf4188:LifeHabit .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Beverage
+inf4188:Beverage rdf:type owl:Class ;
+                 rdfs:subClassOf inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Breast
+inf4188:Breast rdf:type owl:Class ;
+               rdfs:subClassOf inf4188:Cancer .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Buffet
+inf4188:Buffet rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Cancer
+inf4188:Cancer rdf:type owl:Class ;
+               rdfs:subClassOf inf4188:Disease .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Cervical
+inf4188:Cervical rdf:type owl:Class ;
+                 rdfs:subClassOf inf4188:Cancer .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Coffee
+inf4188:Coffee rdf:type owl:Class ;
+               rdfs:subClassOf inf4188:Beverage .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Complement
+inf4188:Complement rdf:type owl:Class ;
+                   rdfs:subClassOf inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#CookedFood
+inf4188:CookedFood rdf:type owl:Class ;
+                   rdfs:subClassOf inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Cysts
+inf4188:Cysts rdf:type owl:Class ;
+              rdfs:subClassOf inf4188:Disease .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#DelocalizedArea
+inf4188:DelocalizedArea rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Disease
+inf4188:Disease rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Dish
+inf4188:Dish rdf:type owl:Class ;
+             rdfs:subClassOf inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#EatingHabit
+inf4188:EatingHabit rdf:type owl:Class ;
+                    rdfs:subClassOf inf4188:LifeHabit .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Fiber
+inf4188:Fiber rdf:type owl:Class ;
+              rdfs:subClassOf inf4188:FoodComponent .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Food
+inf4188:Food rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#FoodAdditive
+inf4188:FoodAdditive rdf:type owl:Class ;
+                     rdfs:subClassOf inf4188:FoodComponent .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#FoodComponent
+inf4188:FoodComponent rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#FoodGroup
+inf4188:FoodGroup rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#FoodWithComplement
+inf4188:FoodWithComplement rdf:type owl:Class ;
+                           rdfs:subClassOf inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Fruit
+inf4188:Fruit rdf:type owl:Class ;
+              rdfs:subClassOf inf4188:RawFood .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Ingredient
+inf4188:Ingredient rdf:type owl:Class ;
+                   rdfs:subClassOf inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#LifeHabit
+inf4188:LifeHabit rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#MacroNutrient
+inf4188:MacroNutrient rdf:type owl:Class ;
+                      rdfs:subClassOf inf4188:Nutrient .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#MainFood
+inf4188:MainFood rdf:type owl:Class ;
+                 rdfs:subClassOf inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#ManufacturedBeverage
+inf4188:ManufacturedBeverage rdf:type owl:Class ;
+                             rdfs:subClassOf inf4188:Beverage .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#ManufacturedFood
+inf4188:ManufacturedFood rdf:type owl:Class ;
+                         rdfs:subClassOf inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#MicroNutrient
+inf4188:MicroNutrient rdf:type owl:Class ;
+                      rdfs:subClassOf inf4188:Nutrient .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Myomas
+inf4188:Myomas rdf:type owl:Class ;
+               rdfs:subClassOf inf4188:Disease .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#NaturalBeverage
+inf4188:NaturalBeverage rdf:type owl:Class ;
+                        rdfs:subClassOf inf4188:Beverage .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Nutrient
+inf4188:Nutrient rdf:type owl:Class ;
+                 rdfs:subClassOf inf4188:FoodComponent .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Person
+inf4188:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Prevention
+inf4188:Prevention rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#RawFood
+inf4188:RawFood rdf:type owl:Class ;
+                rdfs:subClassOf inf4188:Food .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Recipe
+inf4188:Recipe rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#SecondaryMetbolite
+inf4188:SecondaryMetbolite rdf:type owl:Class ;
+                           rdfs:subClassOf inf4188:FoodAdditive .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Symptom
+inf4188:Symptom rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Tea
+inf4188:Tea rdf:type owl:Class ;
+            rdfs:subClassOf inf4188:Beverage .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Tisane
+inf4188:Tisane rdf:type owl:Class ;
+               rdfs:subClassOf inf4188:Beverage .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#TreatmentProtocol
+inf4188:TreatmentProtocol rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Vegetable
+inf4188:Vegetable rdf:type owl:Class ;
+                  rdfs:subClassOf inf4188:RawFood .
+
+
+###  http://www.semanticweb.org/macdallas/ontologies/2025/4/inf4188#Water
+inf4188:Water rdf:type owl:Class ;
+              rdfs:subClassOf inf4188:FoodComponent .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

@@ -38,7 +38,7 @@ const FoodResearch = () => {
                             bg-white rounded-xl shadow-lg
                             px-6 py-4
                             w-full max-w-xl
-                            flex items-center
+                            flex flex-col items-center
                             z-20
                             absolute left-1/2
                             -translate-x-1/2
@@ -51,10 +51,26 @@ const FoodResearch = () => {
                             placeholder="Rechercher un aliment..."
                             className="w-full outline-none border-none bg-transparent text-gray-700 text-lg"
                         />
+                        <p className="text-gray-600 text-base bg-opacity-80 rounded-lg px-4 py-2 shadow-none mt-2 text-center">
+                            Découvrez la valeur nutritionnelle de vos aliments préférés&nbsp;! 🥗
+                        </p>
                     </div>
                 </div>
             </div>
-            {/* ...existing code... */}
+            <a
+                href="/sparql"
+                className="
+                    fixed bottom-6 right-6
+                    bg-green-600 hover:bg-green-700
+                    text-white font-bold py-3 px-6
+                    rounded-full shadow-lg
+                    transition-colors duration-200
+                    z-50
+                "
+                title="Requetes SPARQL"
+            >
+                SPARQL
+            </a>
         </div>
     );
 }
